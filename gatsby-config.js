@@ -8,5 +8,17 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-typescript",
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "robert-kelley-portfolio",
+        protocol: "https",
+        hostname: "robertkelley.xyz",
+      },
+    },
+  ],
+};
