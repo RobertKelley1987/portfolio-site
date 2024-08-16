@@ -1,5 +1,5 @@
 import React from "react";
-import { PROJECTS } from "../../../lib/constants/projects";
+import { PROJECTS } from "./projects";
 import ProjectNameButton from "./ProjectNameButton";
 
 function ProjectNav() {

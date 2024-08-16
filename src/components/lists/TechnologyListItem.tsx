@@ -4,16 +4,22 @@ import { Technology } from "types";
 
 type TechnologyListItemProps = {
   technology: Technology;
-  addComma: boolean;
+  isLast: boolean;
+  isNextToLast: boolean;
 };
 
-function TechnologyListItem({ technology, addComma }: TechnologyListItemProps) {
+function TechnologyListItem({
+  technology,
+  isLast,
+  isNextToLast,
+}: TechnologyListItemProps) {
   return (
     <span className="text-nowrap whitespace-pre-wrap">
+      {isLast && ` and `}
       <TextLink href={technology.url} title={technology.title}>
         {technology.name}
       </TextLink>
-      {addComma && ", "}
+      {!isLast ? !isNextToLast && ", " : "."}
     </span>
   );
 }

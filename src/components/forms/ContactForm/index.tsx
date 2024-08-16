@@ -28,7 +28,7 @@ function ContactForm() {
   }
 
   return (
-    <div className="w-full basis-full flex flex-col gap-6">
+    <div className="w-full md:max-w-[525px] flex flex-col gap-6">
       {error && <p className="font-mono text-red">{error}</p>}
       <form
         onSubmit={handleSubmit}

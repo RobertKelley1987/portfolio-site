@@ -11,16 +11,14 @@ function Message() {
     setFieldError("message", "");
   }
 
-  const borderStyles = message.error
-    ? "border-red border-solid"
-    : "border-black border-dotted";
+  const borderStyles = message.error ? "border-red" : "border-black";
 
   return (
     <textarea
       onChange={handleChange}
       ref={message.ref}
       onInput={updateHeight}
-      className={`border ${borderStyles} placeholder:text-black focus:outline-none focus:border-solid overflow-y-hidden p-3`}
+      className={`border ${borderStyles} placeholder:text-black focus:outline-none overflow-y-hidden p-3`}
       placeholder="Message..."
       name="message"
     ></textarea>

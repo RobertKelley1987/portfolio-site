@@ -10,13 +10,15 @@ function TechnologyList({ technologies }: TechnologyListProps) {
   return (
     <>
       {technologies.map((technology, i) => {
-        const addComma = i !== technologies.length - 1;
+        const isLast = i === technologies.length - 1;
+        const isNextToLast = i === technologies.length - 2;
 
         return (
           <TechnologyListItem
             key={technology.name}
-            addComma={addComma}
             technology={technology}
+            isLast={isLast}
+            isNextToLast={isNextToLast}
           />
         );
       })}

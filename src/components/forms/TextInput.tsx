@@ -7,15 +7,13 @@ type TextInputProps = InputHTMLAttributes<HTMLInputElement> & {
 
 function TextInput(props: TextInputProps, ref) {
   const { onChange, placeholder, name, error } = props;
-  const borderStyles = error
-    ? "border-red border-solid"
-    : "border-black border-dotted";
+  const borderStyles = error ? "border-red" : "border-black";
 
   return (
     <input
       onChange={onChange}
       ref={ref}
-      className={`border ${borderStyles} placeholder:text-black focus:border-solid focus:outline-none p-3`}
+      className={`border ${borderStyles} placeholder:text-black focus:outline-none p-3`}
       placeholder={placeholder}
       name={name}
       type="text"

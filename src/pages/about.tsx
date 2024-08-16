@@ -1,5 +1,5 @@
 import React from "react";
-import { techSkills } from "../lib/constants/tech-skills";
+import { techSkills } from "../lib/tech-skills";
 import GatsbyButtonLink from "../components/common/GatsbyButtonLink";
 import GatsbyTextLink from "../components/common/GatsbyTextLink";
 import Laptop from "../components/art/Laptop";
@@ -18,19 +18,17 @@ function About() {
               About me.
             </h1>
             <p className="font-mono leading-loose">
-              My name is Robert and I'm a web developer from central
-              Massachusetts. I've been learning to build web apps while working
-              full-time for the past 2 years. My passion is building projects
-              with React and TypeScript. I hope that passion shows in my{" "}
+              My name is Robert and I'm from central Massachusetts. I've been
+              learning to build web apps while working full-time for the past 3
+              years. My passion is building projects with React and TypeScript.
+              I hope that passion shows in my{" "}
               <GatsbyTextLink to="/projects" title="Projects page">
                 recent work
               </GatsbyTextLink>
               .
             </p>
-            <p className="font-mono flex flex-wrap leading-loose">
-              <span className="font-bold whitespace-pre-wrap">
-                Technical Skills:{" "}
-              </span>
+            <p className="font-mono flex flex-wrap leading-loose whitespace-pre-wrap">
+              <span className="font-bold">Technical Skills: </span>
               <TechnologyList technologies={techSkills} />
             </p>
             <div className="flex gap-4">

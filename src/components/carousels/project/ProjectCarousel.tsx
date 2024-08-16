@@ -1,6 +1,6 @@
 import React from "react";
 import { useProject } from "../../../hooks/useProject";
-import { PROJECTS } from "../../../lib/constants/projects";
+import { PROJECTS } from "./projects";
 import ProjectNameNav from "./ProjectNameNav";
 import Project from "./Project";
 import ProjectIteratorNav from "./ProjectIteratorNav";

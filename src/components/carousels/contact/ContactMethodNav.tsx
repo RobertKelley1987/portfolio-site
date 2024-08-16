@@ -1,5 +1,5 @@
 import React from "react";
-import { CONTACT_METHODS } from "../../../lib/constants/contact-methods";
+import { CONTACT_METHODS } from "./contact-methods";
 import ContactOptionButton from "./ContactMethodButton";
 
 function ContactMethodNav() {

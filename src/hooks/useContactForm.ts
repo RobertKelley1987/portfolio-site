@@ -4,6 +4,18 @@ import { useValidateForm } from "./useValidateForm";
 import { sendEmail } from "../api";
 import { capitalize } from "../lib/strings";
 
+// Helper to format errors with commas
+function formatList(items: string[]) {
+  // If only one item, capitalize and return.
+  if (items.length === 1) return `${capitalize(items[0])}.`;
+
+  // Otherwise, format list with commas.
+  const tailIndex = items.length - 1;
+  const withTailRemoved = items.slice(0, tailIndex);
+  const withCommas = withTailRemoved.join(", ");
+  return `${capitalize(withCommas)} and ${items[tailIndex]}.`;
+}
+
 // Hook to provide submit function for contact form/
 export function useContactForm() {
   const { setError, setSuccess, setSubmitting } = useFormStatus();
@@ -16,8 +28,8 @@ export function useContactForm() {
     // Validate data
     const { hasError } = validateForm(formData);
     if (hasError) {
-      const formErrors = getFormErrors().join(", ");
-      const editedForGrammar = capitalize(formErrors) + ".";
+      const formErrors = getFormErrors();
+      const editedForGrammar = formatList(formErrors);
       setError(editedForGrammar);
       return;
     }

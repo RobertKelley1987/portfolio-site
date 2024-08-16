@@ -1,6 +1,6 @@
 import React from "react";
 import { useProject } from "../../../hooks/useProject";
-import { PROJECTS } from "../../../lib/constants/projects";
+import { PROJECTS } from "./projects";
 import ProjectIteratorButton from "./ProjectIteratorButton";
 
 function ProjectIteratorNav() {

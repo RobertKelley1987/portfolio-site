@@ -14,7 +14,7 @@ export type Technology = {
 };
 
 export type Image = {
-  file: string;
+  src: string;
   alt: string;
 };
 
@@ -22,8 +22,8 @@ export type Project = {
   id: number;
   title: string;
   repoName: string;
+  imgs: Image[];
   desc: string;
-  img: Image;
   demoURL: string;
   repos?: {
     client?: string;

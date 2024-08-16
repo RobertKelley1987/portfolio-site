@@ -2,7 +2,7 @@ import axios from "axios";
 import type { ContactForm } from "../types";
 import type { AxiosError } from "axios";
 
-const api = axios.create({ baseURL: "http://localhost:3000" });
+const api = axios.create({ baseURL: "https://server.robertkelley.xyz" });
 
 export async function sendEmail(formData: ContactForm) {
   try {
